@@ -1,7 +1,5 @@
 FROM ubuntu:16.04
 
-ARG DONATE_LEVEL=0
-
 WORKDIR /app
 USER root
 
@@ -16,7 +14,8 @@ RUN git clone https://github.com/xmrig/xmrig.git
 WORKDIR /app/xmrig
 
 # Adjust donation level
-RUN sed -i "s/kDonateLevel = 5/kDonateLevel = ${DONATE_LEVEL}/g" src/donate.h
+ADD donate.patch donate.patch
+RUN patch -p0 < donate.patch
 
 RUN mkdir build
 WORKDIR /app/xmrig/build
