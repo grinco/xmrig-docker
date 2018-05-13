@@ -23,5 +23,7 @@ WORKDIR /app/xmrig/build
 RUN cmake .. -DCMAKE_C_COMPILER=gcc-7 -DCMAKE_CXX_COMPILER=g++-7
 RUN make
 
+ADD config.json  /app/xmrig/build/config.json
+
 CMD ./xmrig -c $XMRIG_JSON_CONFIG_PATH
 
