@@ -7,13 +7,11 @@ Docker image for the `xmrig` Monero CPU miner. `xmrig` is built directly from ma
 This image is built expecting a JSON configuration file to be available at `$XMRIG_JSON_CONFIG_PATH`. For example, you can mount a volume at `/app/etc` that contains a configuration file named `config.json` with the following command:
 
 ```sh
-docker run -t -i -d -v /path/to/config/directory:/app/etc -e XMRIG_JSON_CONFIG_PATH=/app/etc/config.json khell/xmrig-docker:latest
+docker run -t -i -d -v /path/to/config/directory:/app/etc -e XMRIG_JSON_CONFIG_PATH=/app/etc/config.json grinco/xmrig:latest
 ```
 
 ### Donations
 If this image helped you mine Monero, please feel free to send a donation my way!
 
-* XMR: `43FtckLEn9BSWP6msnrRNpcZUWVGrr47WBZ7PSHcyF44HFhaRoLmRZK4kx7TFh3Ryh6r3faNiQxNQT6BL1AuiZoEDrNsuum`
-* BTC: `1PraPEpVzcPC6DmSXjuJgeETsmP9KkuJ6U`
-* BCH: `1Ny1MEHsRW7K987GEDRacfb5BM9M1RTEVq`
+* XMR: `43fUjyVCgRpXyTW2eWjfpuTMMJguN44UNi5vs3ogagtkevRaMDqvb7BWbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm3xBaVK9`
  
